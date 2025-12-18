@@ -11,7 +11,7 @@
             </tr>
         </thead>
         <tbody>
-            @for (product of productList; track $index){
+            @for (product of productList$ | async; track product.id){
             <tr>
                 <th scope="row">{{product.id}}</th>
                 <td>{{product.title}}</td>
